@@ -17,10 +17,10 @@ function [probabilidad, todas_las_probabilidades] = calcular_probabilidad_del_ex
   intento1 = my_mex_service (dni);
   intento2 = my_mex_service (dni);
     
-  % Actualizo la cantidad de tiradas
+  % Actualizo la cantidad de pruebas
     total_de_pruebas = total_de_pruebas + 1;
     
-  % Chequeo de qué lado cayó
+  % Chequeo si hay dos fallos seguidos
     if (intento1 == 0 && intento2 == 0)
       casos_favorables = casos_favorables + 1;
     end
